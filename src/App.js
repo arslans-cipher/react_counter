@@ -1,8 +1,8 @@
-function App() {
+import Counter from "./Counter"
+
+const App = () => {
   return <> 
-    <button>-</button>
-    <span>0</span>
-    <button>+</button>
+    <Counter initialCount={0} />
     </>
 }
-export default App;
+export default App
