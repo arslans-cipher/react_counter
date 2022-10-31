@@ -1,6 +1,8 @@
 function App() {
   return <> 
-    <h1>Hello world</h1>
+    <button>-</button>
+    <span>0</span>
+    <button>+</button>
     </>
 }
 export default App;
