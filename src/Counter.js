@@ -1,12 +1,8 @@
 import { useState } from "react"
-import { setState } from 'react'
 
 const Counter = () => {
 
-  const [count, setCount] = useState({})
-  setState(prevState => {
-    return {...prevState, ...count};
-  });
+  const [count, setCount] = useState(0)
 
   return <>
     <button onClick={() => setCount(count - 1)}>-</button>
