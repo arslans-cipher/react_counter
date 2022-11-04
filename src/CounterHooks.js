@@ -1,11 +1,15 @@
-const counterHooks = () => {
+import { useState } from 'react'
+
+const CounterHooks = ( {initialCount} ) => {
+
+  const [state, setState] = useState( { count: initialCount})
 
   return <>
     <button>-</button>
-    <span></span>
+    <span>{initialCount}</span>
     <button>+</button>
   </>
-  
+
 }
 
-export default counterHooks
+export default CounterHooks
