@@ -2,12 +2,12 @@ import { useState } from 'react'
 
 const CounterHooks = ( {initialCount} ) => {
 
-  const [state, setState] = useState( { count: initialCount})
+  const [state, setState] = useState( { count: initialCount } )
 
   return <>
-    <button>-</button>
-    <span>{initialCount}</span>
-    <button>+</button>
+    <button onClick={() => setState({count: state.count - 1})}>-</button>
+    <span>{state.count}</span>
+    <button onClick={() => setState({count: state.count + 1})}>+</button>
   </>
 
 }
