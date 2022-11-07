@@ -16,6 +16,9 @@ const App = () => {
     <br/>
     Counter Hooks
     <CounterHooks initialCount={0}/>
+    <br/>
+    <br/>
+    <br/>
     <button onClick={() => setTheme(prevTheme => {
       return prevTheme === 'red' ? 'blue' : 'red'})}>
         Toggle Theme
