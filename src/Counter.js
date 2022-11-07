@@ -1,14 +1,33 @@
-import { useState } from "react"
+import React, { Component } from 'react'
+import { ThemeContext } from './App'
 
-const Counter = () => {
+export default class Counter extends Component {
+  constructor(props) {
+    super(props)
 
-  const [count, setCount] = useState(0)
+    this.state = {
+      count: props.initialCount
+    }
+  }
 
-  return <>
-    <button onClick={() => setCount(count - 1)}>-</button>
-    <span>{count}</span>
-    <button onClick={() => setCount(count + 1)}>+</button>
-  </>
+  render() {
+    console.log("Render Counter")
+    return (
+      <ThemeContext.Consumer>
+        {style => (
+          <div>
+            <button style={style} onClick={() => this.changeCount(-1)}>-</button>
+            <span>{this.state.count}</span>
+            <button style={style} onClick={() => this.changeCount(1)}>+</button>
+          </div>
+        )}
+      </ThemeContext.Consumer>
+    )
+  }
+
+  changeCount(amount) {
+    this.setState(prevState => { 
+      return { count: prevState.count + amount }
+    })
+  }
 }
-
-export default Counter
