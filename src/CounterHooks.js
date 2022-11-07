@@ -3,6 +3,8 @@ import { ThemeContext } from './App'
 
 const CounterHooks = ( {initialCount} ) => {
 
+  console.log('Render Counter Hooks')
+
   const [count, setCount] = useState(initialCount)
 
   const style = useContext(ThemeContext)
