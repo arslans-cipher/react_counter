@@ -1,4 +1,9 @@
 
-export const Ingredient = () => {
-  return <div>Ingredient</div>
+const Ingredient = ( {name, amount} ) => {
+  return <>
+    <span>{name}</span>
+    <span>{amount}</span>
+  </>
 }
+
+export default Ingredient
