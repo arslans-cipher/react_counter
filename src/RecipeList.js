@@ -10,6 +10,7 @@ const RecipeList = ({ recipes }) => {
         />
       })}
     </div>
+    <button>Add Recipe</button>
   </>
 }
 
