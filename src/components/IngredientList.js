@@ -6,9 +6,9 @@ const IngredientList = ( { ingredients } ) => {
     return <Ingredient key={ingredient.id} {...ingredient}/>
   })
 
-  return <>
+  return <div className='ingredient-grid'>
     {ingredientElements}
-  </>
+  </div>
 }
 
 export default IngredientList
