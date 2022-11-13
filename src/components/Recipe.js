@@ -1,13 +1,14 @@
 import IngredientList from "./IngredientList"
+import '../css/recipe.css'
 
 const Recipe = ( {name, cookTime, servings, instructions, ingredients } ) => {
   return (
-    <div>
-      <div>
-        <h3>{name}</h3>
+    <div className='recipe'>
+      <div className='recipe__header'>
+        <h3 classname='recipe__title'>{name}</h3>
         <div>
-          <button>Edit</button>
-          <button>Delete</button>
+          <button className='btn btn--primary mr-1'>Edit</button>
+          <button className='btn btn--danger'>Delete</button>
         </div>
       </div>
       <div>
