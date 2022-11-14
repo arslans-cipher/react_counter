@@ -1,7 +1,7 @@
 import Recipe from "./Recipe"
 import '../css/recipe-list.css'
 
-const RecipeList = ({ recipes, handleRecipeAdd }) => {
+const RecipeList = ({ recipes, handleRecipeAdd, handleRecipeDelete}) => {
   return <>
     <div className='recipe-list'>
       <div>
@@ -9,6 +9,7 @@ const RecipeList = ({ recipes, handleRecipeAdd }) => {
           return <Recipe
             key={recipe.id}
             {...recipe}
+            handleRecipeDelete={handleRecipeDelete}
           />
         })}
       </div>

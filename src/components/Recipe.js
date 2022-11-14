@@ -1,14 +1,14 @@
 import IngredientList from "./IngredientList"
 import '../css/recipe.css'
 
-const Recipe = ( {name, cookTime, servings, instructions, ingredients } ) => {
+const Recipe = ( { id, name, cookTime, servings, instructions, ingredients, handleRecipeDelete } ) => {
   return (
     <div className='recipe'>
       <div className='recipe__header'>
         <h3 className='recipe__title'>{name}</h3>
         <div>
           <button className='btn btn--primary mr-1'>Edit</button>
-          <button className='btn btn--danger'>Delete</button>
+          <button className='btn btn--danger' onClick={() => handleRecipeDelete(id)}>Delete</button>
         </div>
       </div>
       <div className="recipe__row">
