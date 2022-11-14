@@ -1,8 +1,11 @@
 import IngredientList from "./IngredientList"
 import '../css/recipe.css'
+import { RecipeContext } from './App'
+import React, { useContext } from "react"
 
+const Recipe = ( { id, name, cookTime, servings, instructions, ingredients } ) => {
+  const { handleRecipeDelete } = useContext(RecipeContext)
 
-const Recipe = ( { id, name, cookTime, servings, instructions, ingredients, handleRecipeDelete } ) => {
   return (
     <div className='recipe'>
       <div className='recipe__header'>
