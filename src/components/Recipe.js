@@ -5,7 +5,7 @@ const Recipe = ( {name, cookTime, servings, instructions, ingredients } ) => {
   return (
     <div className='recipe'>
       <div className='recipe__header'>
-        <h3 classname='recipe__title'>{name}</h3>
+        <h3 className='recipe__title'>{name}</h3>
         <div>
           <button className='btn btn--primary mr-1'>Edit</button>
           <button className='btn btn--danger'>Delete</button>
