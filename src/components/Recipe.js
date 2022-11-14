@@ -1,6 +1,7 @@
 import IngredientList from "./IngredientList"
 import '../css/recipe.css'
 
+
 const Recipe = ( { id, name, cookTime, servings, instructions, ingredients, handleRecipeDelete } ) => {
   return (
     <div className='recipe'>

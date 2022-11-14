@@ -1,7 +1,10 @@
 import Recipe from "./Recipe"
 import '../css/recipe-list.css'
+import { RecipeContext } from "./App"
+import React, { useContext } from "react"
 
-const RecipeList = ({ recipes, handleRecipeAdd, handleRecipeDelete}) => {
+const RecipeList = ({ recipes }) => {
+  const { handleRecipeAdd } = useContext(RecipeContext)
   return <>
     <div className='recipe-list'>
       <div>
@@ -9,7 +12,6 @@ const RecipeList = ({ recipes, handleRecipeAdd, handleRecipeDelete}) => {
           return <Recipe
             key={recipe.id}
             {...recipe}
-            handleRecipeDelete={handleRecipeDelete}
           />
         })}
       </div>

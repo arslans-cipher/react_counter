@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from 'uuid'
 import RecipeList from "./RecipeList"
 import '../css/app.css'
 
-const RecipeContext = React.createContext()
+export const RecipeContext = React.createContext()
 
 const sampleRecipes = [
   {
