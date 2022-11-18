@@ -1,20 +1,20 @@
 import '../css/recipe-edit.css'
+import RecipeIngredientEdit from './RecipeIngredientEdit'
 
 const RecipeEdit = () => {
-  return <>
-    <div>
-      <div className='recipeEdit'>
+  return <div className="recipe-edit">
+      <div>
         <button>&times;</button>
       </div>
       <div>
-        <label htmlFor='name'>Name</label>
-        <input type='text' name='name' id='name' />
-        <label htmlFor='cookTime'>Cook Time</label>
-        <input type='text' name='cookTime' id='cookTime' />
-        <label htmlFor='servings'>Serving</label>
-        <input type='number' min='1' name='servings' id='servings' />
-        <label htmlFor='instructions'>Instructions</label>
-        <textarea name='instructions' id='instructions'></textarea>
+        <label htmlFor="name">Name</label>
+        <input type="text" name="name" id="name" />
+        <label htmlFor="cookTime">Cook Time</label>
+        <input type="text" name="cookTime" id="cookTime" />
+        <label htmlFor="servings">Servings</label>
+        <input type="number" min="1" name="servings" id="servings" />
+        <label htmlFor="instructions">Instructions</label>
+        <textarea name="instructions" id="instructions"></textarea>
       </div>
       <br />
       <label>Ingredients</label>
@@ -22,14 +22,13 @@ const RecipeEdit = () => {
         <div>Name</div>
         <div>Amount</div>
         <div></div>
-        {/* <RecipeIngredientEdit />
-        <RecipeIngredientEdit /> */}
+        <RecipeIngredientEdit />
+        <RecipeIngredientEdit />
       </div>
       <div>
         <button>Add Ingredient</button>
       </div>
     </div>
-  </>
 }
 
 export default RecipeEdit
