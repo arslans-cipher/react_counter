@@ -1,8 +1,8 @@
 const RecipeIngredientEdit = () => {
   return <>
-    <input />
-    <input />
-    <button>&times;</button>
+    <input className="recipe-edit__input" type="text" />
+    <input className="recipe-edit__input" type="text" />
+    <button className="btn btn--danger">&times;</button>
   </>
 }
 
