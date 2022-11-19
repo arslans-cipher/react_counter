@@ -1,7 +1,17 @@
+import React, { useContext } from 'react' 
+import { RecipeContext } from './App'
 import '../css/recipe-edit.css'
 import RecipeIngredientEdit from './RecipeIngredientEdit'
 
 const RecipeEdit = ({ recipe }) => {
+
+  const { handleRecipeChange } = useContext(RecipeContext)
+
+  const handleChange = (changes) => {
+    handleRecipeChange( recipe.id, {...recipe, ...changes} )
+  }
+
+
   return <div className="recipe-edit">
   <div className="recipe-edit__remove-button-container">
     <button className="btn recipe-edit__remove-button">&times;</button>
@@ -16,7 +26,8 @@ const RecipeEdit = ({ recipe }) => {
       type="text"
       name="name"
       id="name"
-      value={recipe.name}
+      defaultValue={recipe.name}
+      onChange={event => handleChange( {name: event.target.value} )}
       className="recipe-edit__input" />
     <label
       htmlFor="cookTime"
@@ -27,7 +38,7 @@ const RecipeEdit = ({ recipe }) => {
       type="text"
       name="cookTime"
       id="cookTime"
-      value={recipe.cookTime}
+      defaultValue={recipe.cookTime}
       className="recipe-edit__input" />
     <label
       htmlFor="servings"
@@ -39,7 +50,7 @@ const RecipeEdit = ({ recipe }) => {
       min="1"
       name="servings"
       id="servings"
-      value={recipe.servings}
+      defaultValue={recipe.servings}
       className="recipe-edit__input" />
     <label
       htmlFor="instructions"

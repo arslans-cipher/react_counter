@@ -20,7 +20,6 @@ const App = () => {
 
   const [selectedRecipeId, setSelectedRecipeId] = useState()
   const selectedRecipe = recipes.find(recipe => recipe.id === selectedRecipeId)
-  console.log(selectedRecipe)
 
   useEffect(() => {
     localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(recipes))
