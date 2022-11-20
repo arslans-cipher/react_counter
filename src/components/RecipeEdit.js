@@ -28,6 +28,11 @@ const RecipeEdit = ({ recipe }) => {
     handleChange({ingredients: [...recipe.ingredients, newIngredient] })
   }
 
+  const handleIngredientDelete = (id) => {
+    handleChange({ ingredients: recipe.ingredients.filter(ingredient => ingredient.id !== id) })
+  }
+
+
   return <div className="recipe-edit">
     <div className="recipe-edit__remove-button-container">
       <button className="btn recipe-edit__remove-button" onClick={() => handleRecipeSelect(null)} >&times;</button>
@@ -92,6 +97,7 @@ const RecipeEdit = ({ recipe }) => {
         <RecipeIngredientEdit 
         key={ingredient.id} 
         handleIngredientChange={handleIngredientChange}
+        handleIngredientDelete={handleIngredientDelete}
         ingredient={ingredient} />
       ))}
     </div>
