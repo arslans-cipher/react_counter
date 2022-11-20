@@ -50,6 +50,9 @@ const App = () => {
   }
 
   const handleRecipeDelete = id => {
+    if (selectedRecipeId != null && selectedRecipeId === id) {
+      setSelectedRecipeId(null)
+    }
     setRecipes(recipes.filter(recipe => recipe.id !== id))
   }
 
