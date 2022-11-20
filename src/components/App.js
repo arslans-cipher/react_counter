@@ -28,14 +28,14 @@ const App = () => {
   const handleRecipeAdd = () => {
     const newRecipe = {
       id: uuidv4(),
-      name: 'New',
+      name: '',
       servings: 1,
-      cookTime: '1:00',
-      instructions: 'Instructions',
+      cookTime: '',
+      instructions: '',
       ingredients: [{
         id: uuidv4(),
-        name: 'Name',
-        amount: '1 tablespoon'
+        name: '',
+        amount: ''
       }]
     }
     setSelectedRecipeId(newRecipe.id)
