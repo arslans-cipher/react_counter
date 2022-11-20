@@ -38,6 +38,7 @@ const App = () => {
         amount: '1 tablespoon'
       }]
     }
+    setSelectedRecipeId(newRecipe.id)
     setRecipes([...recipes, newRecipe])
   }
 
