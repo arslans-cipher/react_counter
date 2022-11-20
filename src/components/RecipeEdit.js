@@ -5,7 +5,7 @@ import RecipeIngredientEdit from './RecipeIngredientEdit'
 
 const RecipeEdit = ({ recipe }) => {
 
-  const { handleRecipeChange } = useContext(RecipeContext)
+  const { handleRecipeChange, handleRecipeSelect } = useContext(RecipeContext)
 
   const handleChange = (changes) => {
     handleRecipeChange(recipe.id, { ...recipe, ...changes })
@@ -20,7 +20,7 @@ const RecipeEdit = ({ recipe }) => {
 
   return <div className="recipe-edit">
     <div className="recipe-edit__remove-button-container">
-      <button className="btn recipe-edit__remove-button">&times;</button>
+      <button className="btn recipe-edit__remove-button" onClick={() => handleRecipeSelect(null)} >&times;</button>
     </div>
     <div className="recipe-edit__details-grid">
       <label
