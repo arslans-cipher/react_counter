@@ -1,6 +1,9 @@
+import RecipeList from './RecipeList'
 
-function App() {
-  return null
+const App = () => {
+  return  <>
+    <RecipeList />
+  </>
 }
 
-export default App;
+export default App
