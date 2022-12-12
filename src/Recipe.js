@@ -1,4 +1,6 @@
-const Recipe = ( { name, cookTime, servings, instructions} ) => {
+import IngredientList from "./IngredientList"
+
+const Recipe = ( { name, cookTime, servings, instructions, ingredients} ) => {
   return <div>
     <div>
       <h3>{name}</h3>
@@ -19,6 +21,12 @@ const Recipe = ( { name, cookTime, servings, instructions} ) => {
       <span>Instructions:</span>
       <div>
        {instructions}
+      </div>
+    </div>
+    <div>
+      <span>Ingredients:</span>
+      <div>
+        <IngredientList ingredients={ingredients}/>
       </div>
     </div>
   </div>
