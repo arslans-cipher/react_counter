@@ -1,4 +1,5 @@
 @import-normalize;
+@import 'font.css';
 @import 'recipe-list.css';
 
 *, *::before, *::after {
