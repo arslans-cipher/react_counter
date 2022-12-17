@@ -18,13 +18,13 @@ const Recipe = ( { name, cookTime, servings, instructions, ingredients} ) => {
       <span>{servings}</span>
     </div>
     <div>
-      <span>Instructions:</span>
+      <span>Instructions: </span>
       <div>
        {instructions}
       </div>
     </div>
     <div>
-      <span>Ingredients:</span>
+      <span>Ingredients: </span>
       <div>
         <IngredientList ingredients={ingredients}/>
       </div>

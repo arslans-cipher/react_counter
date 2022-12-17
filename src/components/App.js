@@ -1,4 +1,5 @@
 import RecipeList from './RecipeList'
+import '../css/app.css'
 
 const App = () => {
   return <>
