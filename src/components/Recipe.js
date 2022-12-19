@@ -1,12 +1,12 @@
 import IngredientList from "./IngredientList"
 
 const Recipe = ( { name, cookTime, servings, instructions, ingredients} ) => {
-  return <div>
-    <div>
-      <h3>{name}</h3>
+  return <div recipe='recipe'>
+    <div className='recipe__header'>
+      <h3 className='recipe__title'>{name}</h3>
       <div>
-        <button>Edit</button>
-        <button>Delete</button>
+        <button className='btn btn--primary mr-1'>Edit</button>
+        <button className='btn btn--danger'>Delete</button>
       </div>
     </div>
     <div>
