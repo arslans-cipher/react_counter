@@ -1,6 +1,6 @@
 import Recipe from './Recipe'
 
-const RecipeList = ({ recipes }) => {
+const RecipeList = ({ recipes, handleRecipeAdd }) => {
   return <div className='recipe-list'>
     <div>
       {recipes.map(recipe => {
@@ -8,7 +8,7 @@ const RecipeList = ({ recipes }) => {
       })}
     </div>
     <div className='recipe-list__add-recipe-btn-container'>
-      <button className='btn btn--primary'>Add Recipe</button>
+      <button className='btn btn--primary' onClick={handleRecipeAdd}>Add Recipe</button>
     </div>
   </div>
 }
