@@ -5,6 +5,7 @@ import '../css/app.css'
 
 const App = () => {
   const [recipes, setRecipes] = useState(sampleRecipes)
+
   const handleRecipeAdd = () => {
     const newRecipe = {
       id: uuidv4(),
@@ -23,10 +24,15 @@ const App = () => {
     setRecipes([...recipes, newRecipe])
   }
 
+  const handleRecipeDelete = (id) => {
+    setRecipes(recipes.filter(recipe => recipe.id !== id))
+  }
+
   return <>
     <RecipeList 
       recipes={recipes}
       handleRecipeAdd={handleRecipeAdd}
+      handleRecipeDelete={handleRecipeDelete}
     />
   </>
 }

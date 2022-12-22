@@ -1,10 +1,10 @@
 import Recipe from './Recipe'
 
-const RecipeList = ({ recipes, handleRecipeAdd }) => {
+const RecipeList = ({ recipes, handleRecipeAdd, handleRecipeDelete }) => {
   return <div className='recipe-list'>
     <div>
       {recipes.map(recipe => {
-        return <Recipe key={recipe.id} {...recipe} />
+        return <Recipe key={recipe.id} handleRecipeDelete={handleRecipeDelete} {...recipe} />
       })}
     </div>
     <div className='recipe-list__add-recipe-btn-container'>
