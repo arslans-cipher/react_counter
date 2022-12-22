@@ -1,6 +1,10 @@
+import React, { useContext } from "react"
 import IngredientList from "./IngredientList"
+import { RecipeContext } from "./App"
 
-const Recipe = ( { id, name, cookTime, servings, instructions, ingredients, handleRecipeDelete} ) => {
+const Recipe = ( { id, name, cookTime, servings, instructions, ingredients} ) => {
+  const { handleRecipeDelete } = useContext(RecipeContext)
+
   return  <div className="recipe">
   <div className="recipe__header">
     <h3 className="recipe__title">{name}</h3>
