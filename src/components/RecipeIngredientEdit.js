@@ -8,14 +8,14 @@ const RecipeIngredientEdit = ({ ingredient, handleIngredientChange }) => {
     <input
       className="recipe-edit__input"
       type="text"
-      value={ingredient.name}
       onInput={event => handleChange({ name: event.target.value})}
+      value={ingredient.name}
     />
     <input 
     className="recipe-edit__input" 
     type="text" 
-    value={ingredient.amount}
     onInput={event => handleChange({ amount: event.target.value})}
+    value={ingredient.amount}
     />
     <button className="btn btn--danger">&times;</button>
   </>
