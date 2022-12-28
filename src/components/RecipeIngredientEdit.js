@@ -1,4 +1,4 @@
-const RecipeIngredientEdit = ({ ingredient, handleIngredientChange }) => {
+const RecipeIngredientEdit = ({ ingredient, handleIngredientChange, handleIngredientDelete }) => {
 
   const handleChange = changes => {
     handleIngredientChange(ingredient.id, { ...ingredient, ...changes })
@@ -17,7 +17,7 @@ const RecipeIngredientEdit = ({ ingredient, handleIngredientChange }) => {
       onInput={event => handleChange({ amount: event.target.value })}
       value={ingredient.amount}
     />
-    <button className="btn btn--danger">&times;</button>
+    <button className="btn btn--danger" onClick={() => handleIngredientDelete(ingredient.id)}>&times;</button>
   </>
 }
 
