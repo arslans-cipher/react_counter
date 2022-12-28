@@ -1,6 +1,6 @@
 import RecipeIngredientEdit from "./RecipeIngredientEdit"
 
-const RecipeEdit = () => {
+const RecipeEdit = ({ recipe }) => {
   return <div className="recipe-edit">
     <div className="recipe-edit__remove-button-container">
       <button className="btn recipe-edit__remove-button">&times;</button>
@@ -15,6 +15,7 @@ const RecipeEdit = () => {
         type="text"
         name="name"
         id="name"
+        value={recipe.name}
         className="recipe-edit__input" />
       <label
         htmlFor="cookTime"
@@ -25,6 +26,7 @@ const RecipeEdit = () => {
         type="text"
         name="cookTime"
         id="cookTime"
+        value={recipe.cookTime}
         className="recipe-edit__input" />
       <label
         htmlFor="servings"
@@ -36,6 +38,7 @@ const RecipeEdit = () => {
         min="1"
         name="servings"
         id="servings"
+        value={recipe.servings}
         className="recipe-edit__input" />
       <label
         htmlFor="instructions"
@@ -45,7 +48,7 @@ const RecipeEdit = () => {
       <textarea
         name="instructions"
         className="recipe-edit__input"
-        id="instructions"></textarea>
+        id="instructions">{recipe.instructions}</textarea>
     </div>
     <br />
     <label className="recipe-edit__label">Ingredients</label>
@@ -53,8 +56,9 @@ const RecipeEdit = () => {
       <div>Name</div>
       <div>Amount</div>
       <div></div>
-      <RecipeIngredientEdit />
-      <RecipeIngredientEdit />
+      {recipe.ingredients.map(ingredient => (
+        <RecipeIngredientEdit key={ingredient.id} ingredient={ingredient}/>
+      ))}
     </div>
     <div className="recipe-edit__add-ingredient-btn-container">
       <button className="btn btn--primary">Add Ingredient</button>
