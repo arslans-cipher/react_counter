@@ -13,7 +13,7 @@ const RecipeEdit = ({ recipe }) => {
     const newIngredients = [...recipe.ingredients]
     const index = newIngredients.findIndex(ingredient => ingredient.id === id)
     newIngredients[index] = ingredient
-    handleChange({ ingredient: newIngredients })
+    handleChange({ ingredients: newIngredients })
   }
 
   return <div className="recipe-edit">
